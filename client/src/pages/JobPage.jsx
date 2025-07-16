@@ -5,7 +5,7 @@ import { useJob } from "../lib/graphql/hooks";
 
 function JobPage() {
   const { jobId } = useParams();
-  const {job, loading, error} = useJob(jobId);
+  const { job, loading, error } = useJob(jobId);
   // const [state, setState] = useState({
   //   job: null,
   //   loading: true,
@@ -21,7 +21,7 @@ function JobPage() {
   //         setState({ job: null, loading: false, error: true });
   //       }
   //     })();
-  //   }, [jobId]);  
+  //   }, [jobId]);
   //   const {job, loading, error} = state;
   if (loading) {
     return <div>Loading...</div>;

@@ -33,7 +33,9 @@ export function useCreateJob() {
   const [mutate, { loading }] = useMutation(createJobMutation);
 
   const createJob = async (title, description) => {
-    const { data: { job } } = await mutate({
+    const {
+      data: { job },
+    } = await mutate({
       variables: { input: { title, description } },
       update: (cache, { data }) => {
         cache.writeQuery({
